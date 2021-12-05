@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="splash_screen_main_txt">40sp</dimen>
+
+    <dimen name="home_screen_prim_txt">30sp</dimen>
+
+    <dimen name="home_screen_sec_txt">25sp</dimen>
+
+    <dimen name="home_screen_ter_txt">20sp</dimen>
+
+    <dimen name="home_screen_btn_padding">10dp</dimen>
+
+    <dimen name="home_screen_btn_horizontal_padding">20dp</dimen>
+
+    <dimen name="home_screen_btn_radius">45dp</dimen>
+
+    <dimen name="home_screen_btn_size">20sp</dimen>
+
+    <dimen name="home_screen_toolbar_min_height">40dp</dimen>
+
+    <dimen name="feedback_text_size">20sp</dimen>
+
+    <dimen name="custom_toast_image_view_margin_right">8dp</dimen>
+
+    <dimen name="custom_list_view_item_padding">15dp</dimen>
+
+</resources>

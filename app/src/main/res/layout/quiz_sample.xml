@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baltic_sea"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/sample_quiz_screen_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/peri_winkle"
+        android:minHeight="@dimen/home_screen_toolbar_min_height"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:titleMarginBottom="20dp"
+        app:titleTextColor="@color/gentle_breeze" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/CircularDeterminateProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:min="0"
+        android:max="100"
+        android:layout_marginStart="272dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
+        tools:progress="50" />
+    <TextView
+        android:id="@+id/text_view_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/peri_winkle"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+        app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+        app:layout_constraintStart_toStartOf="@+id/progress_bar"
+        app:layout_constraintTop_toTopOf="@+id/progress_bar"
+        tools:text="1:00"
+        android:fontFamily="@font/comfortaa_variable_font_wght"
+        />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:fontFamily="@font/comfortaa_variable_font_wght"
+        style="@style/CustomButton"
+        android:padding="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/peri_winkle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+    <Button
+        android:id="@+id/option_a"
+        style="@style/OptionButton"
+        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_marginTop="68dp"
+        android:text="TextView"
+        android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:padding="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/gentle_breeze"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <Button
+        android:id="@+id/option_b"
+        style="@style/OptionButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="20dp"
+        android:textSize="15sp"
+        android:text="TextView"
+        android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:textColor="@color/gentle_breeze"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option_a" />
+
+    <Button
+        android:id="@+id/option_c"
+        style="@style/OptionButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:padding="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/gentle_breeze"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option_b" />
+
+    <Button
+        android:id="@+id/option_d"
+        style="@style/OptionButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:padding="20dp"
+        android:text="TextView"
+        android:textColor="@color/gentle_breeze"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option_c" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/CustomButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:text="@string/quiz_submit_btn_text"
+        android:textAllCaps="false"
+        android:textColor="@color/baltic_sea"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option_d" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
