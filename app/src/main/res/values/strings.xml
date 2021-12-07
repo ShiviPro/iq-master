@@ -19,4 +19,6 @@
 
     <string name="quiz_submit_btn_text">Next</string>
 
+    <string name="quiz_results_heading"><u>Results</u></string>
+
 </resources>

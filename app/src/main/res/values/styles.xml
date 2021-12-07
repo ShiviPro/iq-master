@@ -14,9 +14,9 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="CustomButton" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/custom_btn_layout</item>
-    </style>
+<!--    <style name="CustomButton" parent="Widget.AppCompat.Button">-->
+<!--        <item name="android:background">@drawable/custom_btn_layout</item>-->
+<!--    </style>-->
 
     <style name="ratingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">@color/gentle_breeze</item>
@@ -27,13 +27,5 @@
         <item name="android:indeterminateOnly">false</item>
         <item name="android:progressDrawable">@drawable/circular_progress_bar</item>
     </style>
-
-    <style name="OptionButton" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/custom_opt_btn_layout</item>
-        <item name="android:padding">20dp</item>
-        <item name="android:layout_width">match_parent</item>
-    </style>
-
-
-
 </resources>
+

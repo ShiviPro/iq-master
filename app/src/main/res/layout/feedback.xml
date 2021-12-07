@@ -90,7 +90,7 @@
         android:textAllCaps="false"
         android:textColor="@color/baltic_sea"
         android:textSize="@dimen/home_screen_btn_size"
-        style="@style/CustomButton"
+        android:background="@drawable/btn_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

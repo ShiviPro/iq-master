@@ -26,8 +26,6 @@
         style="@style/CircularDeterminateProgressBar"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:min="0"
-        android:max="100"
         android:layout_marginStart="272dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -35,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096"
-        tools:progress="50" />
+        />
     <TextView
         android:id="@+id/text_view_progress"
         android:layout_width="wrap_content"
@@ -57,7 +55,8 @@
         android:layout_marginTop="32dp"
         android:text="TextView"
         android:fontFamily="@font/comfortaa_variable_font_wght"
-        style="@style/CustomButton"
+        android:background="@drawable/btn_default"
+        android:textAllCaps="false"
         android:padding="20dp"
         android:textSize="20sp"
         android:textColor="@color/peri_winkle"
@@ -68,12 +67,13 @@
 
     <Button
         android:id="@+id/option_a"
-        style="@style/OptionButton"
         android:layout_height="wrap_content"
+        android:background="@color/exodus_fruit"
         android:layout_width="350dp"
         android:layout_marginTop="68dp"
         android:text="TextView"
         android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:textAllCaps="false"
         android:padding="20dp"
         android:textSize="15sp"
         android:textColor="@color/gentle_breeze"
@@ -85,7 +85,7 @@
 
     <Button
         android:id="@+id/option_b"
-        style="@style/OptionButton"
+        android:background="@color/exodus_fruit"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -93,6 +93,7 @@
         android:textSize="15sp"
         android:text="TextView"
         android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:textAllCaps="false"
         android:textColor="@color/gentle_breeze"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,12 +103,13 @@
 
     <Button
         android:id="@+id/option_c"
-        style="@style/OptionButton"
+        android:background="@color/exodus_fruit"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:textAllCaps="false"
         android:padding="20dp"
         android:textSize="15sp"
         android:textColor="@color/gentle_breeze"
@@ -119,11 +121,12 @@
 
     <Button
         android:id="@+id/option_d"
-        style="@style/OptionButton"
+        android:background="@color/exodus_fruit"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/comfortaa_variable_font_wght"
+        android:textAllCaps="false"
         android:padding="20dp"
         android:text="TextView"
         android:textColor="@color/gentle_breeze"
@@ -136,7 +139,7 @@
 
     <Button
         android:id="@+id/button2"
-        style="@style/CustomButton"
+        android:background="@drawable/btn_default"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"

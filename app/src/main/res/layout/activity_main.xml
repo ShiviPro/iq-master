@@ -78,7 +78,7 @@
         android:layout_marginTop="148dp"
         android:text="@string/home_screen_btn_txt"
         android:textSize="@dimen/home_screen_btn_size"
-        style="@style/CustomButton"
+        android:background="@drawable/btn_default"
         android:textColor="@color/baltic_sea"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
