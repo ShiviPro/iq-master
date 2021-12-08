@@ -61,6 +61,8 @@ public class AllQuizzes extends AppCompatActivity {
                     public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                         Intent quiz = new Intent(AllQuizzes.this, SampleQuiz.class);
                         quiz.putExtra("quiz_name", quizzesModalArrayList.get(position).getQuizName());
+                        quiz.putExtra("points_per_question", quizzesModalArrayList.get(position).getPointsPerQuestion());
+                        quiz.putExtra("minutes_per_question", quizzesModalArrayList.get(position).getMinutesPerQuestion());
                         startActivity(quiz);
                     }
                 }

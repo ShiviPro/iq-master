@@ -32,6 +32,10 @@ public class SampleQuiz extends AppCompatActivity {
     private long timeLeftInMilliseconds;
     private boolean isTimerRunning;
 
+    private String quizName;
+    private int pointsPerQuestion;
+    private int minutesPerQuestion;
+
     Typeface primary_tf;
 
     private TextView ques;
@@ -56,11 +60,13 @@ public class SampleQuiz extends AppCompatActivity {
         primary_tf = ResourcesCompat.getFont(this, R.font.comfortaa_variable_font_wght);
 
         Intent quiz_selected = getIntent();
-        String quizName = quiz_selected.getStringExtra("quiz_name");
+        quizName = quiz_selected.getStringExtra("quiz_name");
+        pointsPerQuestion = quiz_selected.getIntExtra("points_per_question", 1);
+        minutesPerQuestion = quiz_selected.getIntExtra("minutes_per_question", 1);
 
         timer_tv = (TextView) findViewById(R.id.text_view_progress);
-        timeLeftInMilliseconds = 60_000;
-        timer_tv.setText(String.valueOf("1:00"));
+        timeLeftInMilliseconds = minutesPerQuestion*60*1000;
+        timer_tv.setText(String.valueOf(minutesPerQuestion+":00"));
 
         timer = (ProgressBar) findViewById(R.id.progress_bar);
         int timeLeftInitially = (int)timeLeftInMilliseconds/1000;
@@ -91,7 +97,7 @@ public class SampleQuiz extends AppCompatActivity {
         final String[] correctAnswer = {questionData.getCorrectAnswer()};
         ArrayList<String> options = new ArrayList<>();
         final int[] score = {0};
-        int maxScore = questionsModalArrayList.size() * 1;
+        int maxScore = questionsModalArrayList.size() * pointsPerQuestion;
 
         String optionStr = questionData.getOptions();
         int startIndex = 0;
@@ -173,12 +179,12 @@ public class SampleQuiz extends AppCompatActivity {
 
                 if(selectedOption.equals(correctAnswer[0])) {
                     displayToast("☺️ Correct");
-                    score[0] += 1;
+                    score[0] += pointsPerQuestion;
                 }
                 else if(selectedOption.equals("")) {
                     displayToast("Correct Answer was " + correctAnswer[0]);
                 }
-                else displayToast("\uD83D\uDE22 Wrong\nCorrect Answer was " + correctAnswer[0]);
+                else displayToast("\uD83D\uDE22 Incorrect\nCorrect Answer was " + correctAnswer[0]);
 
                 if(questionIndex[0] +1 < questionsModalArrayList.size()) {
                     questionIndex[0] +=1;
@@ -235,7 +241,7 @@ public class SampleQuiz extends AppCompatActivity {
     }
 
     private void startTimer() {
-        timeLeftInMilliseconds = 60_000;
+        timeLeftInMilliseconds = minutesPerQuestion*60*1000;
         timer_ref = new CountDownTimer(timeLeftInMilliseconds, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
