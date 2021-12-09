@@ -47,7 +47,15 @@ public class SampleQuiz extends AppCompatActivity {
 
     private IntroQuizDBHandler introQuizDBHandler;
     private AllAboutAsiaQuizDBHandler allAboutAsiaQuizDBHandler;
+    private UltimateArtQuizDBHandler ultimateArtQuizDBHandler;
+    private WiningAndDiningQuizDBHandler winingAndDiningQuizDBHandler;
+    private PredatoryBirdsQuizDBHandler predatoryBirdsQuizDBHandler;
+    private PeriodicTableQuizDBHandler periodicTableQuizDBHandler;
+    private MapQuizDBHandler mapQuizDBHandler;
+    private HistoryOfWarQuizDBHandler historyOfWarQuizDBHandler;
+    private MoonsQuizDBHandler moonsQuizDBHandler;
     private ArrayList<QuizModal> questionsModalArrayList;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -88,6 +96,27 @@ public class SampleQuiz extends AppCompatActivity {
             case "All About Asia Quiz": allAboutAsiaQuizDBHandler = new AllAboutAsiaQuizDBHandler(SampleQuiz.this);
                                         questionsModalArrayList = allAboutAsiaQuizDBHandler.readQuestions();
                                         break;
+            case "Ultimate Art Quiz": ultimateArtQuizDBHandler = new UltimateArtQuizDBHandler(SampleQuiz.this);
+                                      questionsModalArrayList = ultimateArtQuizDBHandler.readQuestions();
+                                      break;
+            case "Wining & Dining Quiz": winingAndDiningQuizDBHandler = new WiningAndDiningQuizDBHandler(SampleQuiz.this);
+                                         questionsModalArrayList = winingAndDiningQuizDBHandler.readQuestions();
+                                         break;
+            case "Predatory Birds Quiz": predatoryBirdsQuizDBHandler = new PredatoryBirdsQuizDBHandler(SampleQuiz.this);
+                                         questionsModalArrayList = predatoryBirdsQuizDBHandler.readQuestions();
+                                         break;
+            case "The Periodic Table Quiz": periodicTableQuizDBHandler = new PeriodicTableQuizDBHandler(SampleQuiz.this);
+                                            questionsModalArrayList = periodicTableQuizDBHandler.readQuestions();
+                                            break;
+            case "The Map Quiz": mapQuizDBHandler = new MapQuizDBHandler(SampleQuiz.this);
+                                 questionsModalArrayList = mapQuizDBHandler.readQuestions();
+                                 break;
+            case "History Of War": historyOfWarQuizDBHandler = new HistoryOfWarQuizDBHandler(SampleQuiz.this);
+                                   questionsModalArrayList = historyOfWarQuizDBHandler.readQuestions();
+                                   break;
+            case "Moons Quiz": moonsQuizDBHandler = new MoonsQuizDBHandler(SampleQuiz.this);
+                               questionsModalArrayList = moonsQuizDBHandler.readQuestions();
+                               break;
         }
 
         final int[] questionIndex = {0};
